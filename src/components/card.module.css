@@ -1,0 +1,50 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.options__block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card input {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: rgba(255, 255, 255, 0.200) -1px 5px 24px -4px;
+}
+.card button {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+}
+.colors {
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+.colors__block {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: opacity .5s;
+}
+.colors__block:hover {
+    opacity: .7;
+}
+.colors__block:active {
+    opacity: .3;
+}
+.colors__block:first-child {
+    border-radius: 10px 0 0 10px;
+}
+.colors__block:last-child {
+    border-radius: 0 10px 10px 0;
+}

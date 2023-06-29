@@ -1,0 +1,9 @@
+.user__card button {
+    box-shadow: -1px 5px 24px -4px #3BB273;
+    background: #3BB273;
+    transition: all 1s;
+}
+
+.user__card button:hover {
+    opacity: .8;
+}

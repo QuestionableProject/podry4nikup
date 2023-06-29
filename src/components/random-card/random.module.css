@@ -1,0 +1,9 @@
+.random__card button{
+    box-shadow: -1px 5px 24px -4px #E15554;
+    background: #f36b6b;
+    transition: all 1s;
+}
+
+.random__card button:hover {
+    opacity: .8; 
+}

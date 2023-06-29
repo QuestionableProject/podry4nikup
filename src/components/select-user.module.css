@@ -1,0 +1,32 @@
+.selectUser {
+    width: 300px;
+    position: absolute;
+    transform: translate(10%, -25%);
+    right: 0;
+    top: 0;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.selectUser input {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    border-radius: 10px;
+    background: white;
+}
+
+.selectUser button {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: -1px 5px 24px -4px #3BB273;
+    background: #3BB273;
+}
+.selectUser p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

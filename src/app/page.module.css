@@ -6,6 +6,7 @@
   height: 100vh;
   background: #1E1E1E;
 }
+
 .page svg {
   position: absolute;
   top: 0;
@@ -19,15 +20,25 @@
   grid-template-rows: repeat(3, 1fr);
   gap: 30px 100px;
 }
+
 .options__block div:nth-child(2) {
   grid-column-start: 3;
 }
+
 .options__block div:nth-child(3) {
   grid-column-start: 2;
 }
+
 .options__block div:nth-child(4) {
   grid-column-start: 1;
 }
+
 .options__block div:nth-child(5) {
   grid-column-start: 3;
+}
+
+@media (max-width: 1100px) {
+  .options__block {
+    background: wheat;
+  }
 }

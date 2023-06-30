@@ -10,10 +10,11 @@ export default function MathCard() {
     const [mathValue, setMathValueResult] = useState("Решить уравнение")
 
     function mathRandom() {
+        const operator = Math.floor(Math.random() * (4 - 0)) + 0
         const randomOne = Math.floor(Math.random() * (1001 - 0)) + 0
         const randomTwo = Math.floor(Math.random() * (1001 - 0)) + 0
-        const operator = Math.floor(Math.random() * (3 - 0)) + 0
-
+        const mediumRandomOne = Math.floor(Math.random() * (51 - 0)) + 0
+        const mediumRandomTwo = Math.floor(Math.random() * (51 - 0)) + 0
         switch (operator) {
             case 0:
                 setMathValueResult(`Сколько будет ${randomOne} + ${randomTwo}`)
@@ -26,14 +27,14 @@ export default function MathCard() {
                 setDecision(minus)
                 break;
             case 2:
-                setMathValueResult(`Сколько будет ${randomOne} * ${randomTwo}`)
-                let multiply = randomOne * randomTwo
+                setMathValueResult(`Сколько будет ${mediumRandomOne} * ${mediumRandomTwo}`)
+                let multiply = mediumRandomOne * mediumRandomTwo
                 setDecision(multiply)
                 break;
             case 3:
-                setMathValueResult(`Сколько будет ${randomOne} / ${randomTwo}`)
-                let share = randomOne / randomTwo
-                setDecision(share)
+                setMathValueResult(`Сколько будет ${mediumRandomOne} / ${mediumRandomTwo}`)
+                let share = mediumRandomOne / mediumRandomTwo
+                setDecision(share.toFixed(1))
                 break;
         }
         return setInputResult(true)

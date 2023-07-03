@@ -4,6 +4,7 @@ import classes from '../card.module.css'
 import classesCard from './user-card.module.css'
 import SelectUser from '../select-user'
 import clsx from 'clsx'
+import Cookies from 'js-cookie'
 
 export default function UserCard() {
 
@@ -12,6 +13,15 @@ export default function UserCard() {
 
     function randomUser(userOne, userTwo) { 
         const number = Math.floor(Math.random() * (2 - 0) + 0);
+        if (userOne === "" && userTwo === "" && Cookies.get("userOne") && Cookies.get("userTwo") ) {
+            if (number === 1) {
+                setResult(Cookies.get("userOne"))
+            } else {
+                setResult(Cookies.get("userTwo"))
+            }
+            setRandomUserState(false)
+            return false
+        }  
         if (userOne === "" && userTwo === "") {
             if (number === 1) {
                 setResult("Пользователь 1")
@@ -45,6 +55,8 @@ export default function UserCard() {
         } else {
             setResult(userTwo)
         }
+        Cookies.set('userOne', userOne, { expires: 365 })
+        Cookies.set('userTwo', userTwo, { expires: 365 })
         setRandomUserState(false)
     }
     return (

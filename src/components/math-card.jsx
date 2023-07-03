@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import classes from './card.module.css'
 
 export default function MathCard() {
@@ -18,23 +18,24 @@ export default function MathCard() {
         switch (operator) {
             case 0:
                 setMathValueResult(`Сколько будет ${randomOne} + ${randomTwo}`)
-                let plus = randomOne + randomTwo
+                const plus = randomOne + randomTwo
                 setDecision(plus)
                 break;
             case 1:
                 setMathValueResult(`Сколько будет ${randomOne} - ${randomTwo}`)
-                let minus = randomOne - randomTwo
+                const minus = randomOne - randomTwo
                 setDecision(minus)
                 break;
             case 2:
                 setMathValueResult(`Сколько будет ${mediumRandomOne} * ${mediumRandomTwo}`)
-                let multiply = mediumRandomOne * mediumRandomTwo
+                const multiply = mediumRandomOne * mediumRandomTwo
                 setDecision(multiply)
                 break;
             case 3:
-                setMathValueResult(`Сколько будет ${mediumRandomOne} / ${mediumRandomTwo}`)
-                let share = mediumRandomOne / mediumRandomTwo
-                setDecision(share.toFixed(1))
+                setMathValueResult(`Сколько будет ${mediumRandomOne} / ${mediumRandomTwo}? Пример: 1`)
+                const share = mediumRandomOne / mediumRandomTwo
+                const fix = share.toFixed(0)
+                setDecision(Number(fix))
                 break;
         }
         return setInputResult(true)
@@ -43,6 +44,7 @@ export default function MathCard() {
     function equation() {
         if (result === "") {
             setMathValueResult("Решить уравнение")
+            setDecision(0)
             return setInputResult(false)
         }
         if (Number(result) === decision) {
@@ -50,7 +52,7 @@ export default function MathCard() {
             setResult("")
             setInputResult(false)
         } else {
-            setMathValueResult("Далбаеб")
+            setMathValueResult(`Далбаеб ${decision}`)
             setResult("")
             setInputResult(false)
         }
@@ -60,7 +62,7 @@ export default function MathCard() {
         <div className={classes.card}>
             <input type="text" placeholder="Реши уравнение" value={mathValue} disabled />
             {inputResult && (
-                <input type="text" placeholder="Ответ" maxLength={20} value={result} onChange={e => setResult(e.target.value.replace(/[^0-9\., -]/g, ''))} />
+                <input type="text" placeholder="Ответ" maxLength={20} value={result} onChange={e => setResult(e.target.value.replace(/[^0-9\. -]/g, ''))} />
             )}
             {inputResult ? (
                 <button

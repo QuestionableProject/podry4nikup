@@ -20,16 +20,21 @@ export default function ColorsCard() {
         let x = Math.floor(Math.random() * 256);
         let y = Math.floor(Math.random() * 256);
         setColorTree('#' + x.toString(16) + y.toString(16) + z.toString(16))
+        console.log(colorOne, colorTree ,colorTwo);
     }
 
     function copy(e) {
         navigator.clipboard.writeText(e.target.style.background)
     }
+
     return (
         <div className={classes.card}>
             <div className={classes.colors}>
                 <div onClick={copy} className={classes.colors__block} style={{
                     background: colorOne
+                }}></div>
+                <div className={classes.shadow} style={{
+                    background: `linear-gradient(90deg, ${colorOne},${colorTwo},${colorTree})`
                 }}></div>
                 <div onClick={copy} className={classes.colors__block} style={{
                     background: colorTwo

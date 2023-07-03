@@ -27,6 +27,17 @@
     box-shadow: -1px 5px 24px -4px #3BB273;
     background: #3BB273;
 }
+
 .selectUser p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+    .selectUser {
+        width: auto;
+        position: relative;
+        transform: none;
+        color: rgb(255, 255, 255); 
+    }
+
 }

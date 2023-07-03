@@ -1,0 +1,19 @@
+.mobile__logo, .logo {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .logo {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .mobile__logo {
+        display: block;
+    }
+}

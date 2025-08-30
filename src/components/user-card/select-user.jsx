@@ -13,7 +13,7 @@ export default function SelectUser({ func }) {
                 <p>
                     {userOne}
                 </p>
-                <input placeholder={Cookies.get('userOne')?Cookies.get('userOne'): "Пользователь 1"} type="text" maxLength={30} value={userOne} onChange={(e) => { setUserOne(e.target.value) }} />
+                <input className={classes.cardInput} placeholder={Cookies.get('userOne')?Cookies.get('userOne'): "Пользователь 1"} type="text" maxLength={30} value={userOne} onChange={(e) => { setUserOne(e.target.value) }} />
             </label>
             <label>
                 <p>
@@ -21,7 +21,7 @@ export default function SelectUser({ func }) {
                 </p>
                 <input placeholder={Cookies.get('userTwo')?Cookies.get('userTwo'): "Пользователь 2"} type="text" maxLength={30} value={userTwo} onChange={e => setUserTwo(e.target.value)} />
             </label>
-            <button onClick={() => func(userOne, userTwo)}>Сгенерировать</button>
+            <button className={classes.cardButton} onClick={() => func(userOne, userTwo)}>Сгенерировать</button>
         </div>
     )
 }

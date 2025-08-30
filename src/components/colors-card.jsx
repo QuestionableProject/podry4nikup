@@ -20,7 +20,7 @@ export default function ColorsCard() {
         let x = Math.floor(Math.random() * 256);
         let y = Math.floor(Math.random() * 256);
         setColorTree('#' + x.toString(16) + y.toString(16) + z.toString(16))
-        console.log(colorOne, colorTree ,colorTwo);
+        console.log(colorOne, colorTree, colorTwo);
     }
 
     function copy(e) {
@@ -44,6 +44,7 @@ export default function ColorsCard() {
                 }}></div>
             </div>
             <button
+                className={classes.cardButton}
                 onClick={randomColor}
                 style={{
                     boxShadow: "-1px 5px 24px -4px #FFD166",

@@ -14,8 +14,8 @@ export default function RandomCard() {
     }
     return (
         <div className={clsx(classes.card, classesCard.random__card)}>
-            <input type="text" placeholder="Случайное число" value={randomNumberState} disabled />
-            <button onClick={randomNumber}>Сгенерировать</button>
+            <input className={classes.cardInput} type="text" placeholder="Случайное число" value={randomNumberState} disabled />
+            <button className={classes.cardButton} onClick={randomNumber}>Сгенерировать</button>
         </div>
     )
 }

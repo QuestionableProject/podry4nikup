@@ -2,27 +2,37 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
   overflow: hidden;
 }
+
 body::-webkit-scrollbar {
   width: 5px;
   background: #3e3e3e;
 }
+
 body::-webkit-scrollbar-thumb {
   width: 5px;
   background: #000000a1;
 }
+
 input {
   border: 0;
   outline: none;
   text-align: center;
 }
+
 button {
   border: 0;
   cursor: pointer;
   outline: none;
+}
+
+li {
+  list-style: none;
 }
 
 @media screen and (max-width: 900px) {

@@ -4,11 +4,13 @@ import Line from '@/components/svg/line'
 import UserCard from '@/components/user-card/user-card'
 import ColorsCard from '@/components/colors-card'
 import MathCard from '@/components/math-card'
-import PasswordCard from '@/components/password-card'
+import PasswordCard from '@/components/password-card/password-card'
 import Logo from '@/components/svg/logo'
 import MobileLogo from '@/components/svg/mobile-logo'
 
+
 export default function Home() {
+
   return (
     <main className={styles.main} >
       <Line />
